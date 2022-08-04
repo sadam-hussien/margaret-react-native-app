@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 
-import {View, Text, StyleSheet, Image, ScrollView} from 'react-native';
+import {View, StyleSheet, Image, ScrollView} from 'react-native';
+
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 import {COLORS, images, SIZES} from '../../../constants';
 
@@ -18,18 +20,20 @@ const Auth = () => {
     }
   };
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       {/* logo  */}
       <View style={styles.logo}>
         <Image source={images.logo} style={styles.logoImage} />
       </View>
       {/* content  */}
-      {content === 'login' ? (
-        <Login authToggle={authToggle} />
-      ) : (
-        <Register authToggle={authToggle} />
-      )}
-    </View>
+      <KeyboardAwareScrollView>
+        {content === 'login' ? (
+          <Login authToggle={authToggle} />
+        ) : (
+          <Register authToggle={authToggle} />
+        )}
+      </KeyboardAwareScrollView>
+    </ScrollView>
   );
 };
 

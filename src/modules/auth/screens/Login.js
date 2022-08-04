@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {Formik, Form} from 'formik';
+import {View, StyleSheet} from 'react-native';
 
-import {View, StyleSheet, Text, Button} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+
+import {Formik} from 'formik';
 
 import AuthTitle from '../components/AuthTitle';
 
@@ -13,10 +15,20 @@ import {CustomButton, InputWithIcon} from '../../../components/core';
 import {COLORS, icons, SIZES} from '../../../constants';
 
 const Login = ({authToggle}) => {
+  const navigate = useNavigation();
+  const [loading, setLoading] = useState(false);
+  const submitLogin = values => {
+    setLoading(true);
+    setTimeout(() => {
+      navigate.navigate('TabNav');
+    }, 20);
+  };
   return (
     <View style={styles.login}>
       <AuthTitle label="sign in to continue" />
-      <Formik initialValues={{email: '', password: ''}}>
+      <Formik
+        initialValues={{email: '', password: ''}}
+        onSubmit={values => submitLogin(values)}>
         {({handleChange, handleBlur, handleSubmit, values}) => (
           <View style={styles.formContainer}>
             <InputWithIcon
@@ -49,6 +61,7 @@ const Login = ({authToggle}) => {
               onPress={handleSubmit}
               label="log in"
               containerStyles={{marginTop: SIZES.margin}}
+              loading={loading}
             />
             <AuthFooter
               label="dont have an account?"

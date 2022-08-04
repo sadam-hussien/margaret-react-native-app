@@ -35,7 +35,7 @@ const flashDeals = [
     image: require('../../assets/images/dummy/product_02.png'),
     sold_qty: '546',
     total_qty: '5k',
-    percentage: '11%',
+    percentage: '40%',
   },
 ];
 
@@ -105,49 +105,49 @@ const quickALinks = [
     id: 1,
     title: 'Event',
     icon: require('../../assets/icons/book.png'),
-    color: '#FFFFFF',
+    color: '#eaecf2',
   },
   {
     id: 2,
     title: 'Transport',
     icon: require('../../assets/icons/car.png'),
-    color: '#6DA2FD',
+    color: '#ecf2f8',
   },
   {
     id: 3,
     title: 'Live',
     icon: require('../../assets/icons/video.png'),
-    color: '#F9A1D8',
+    color: '#faf1f5',
   },
   {
     id: 4,
     title: 'Coin',
     icon: require('../../assets/icons/shopping_bag.png'),
-    color: '#00D2DF',
+    color: '#e0f5f7',
   },
   {
     id: 5,
     title: 'Flash Sale',
     icon: require('../../assets/icons/clock.png'),
-    color: '#F7565D',
+    color: '#faebeb',
   },
   {
     id: 6,
     title: 'Search',
     icon: require('../../assets/icons/search.png'),
-    color: '#FDD452',
+    color: '#f9f5ea',
   },
   {
     id: 7,
     title: 'Premium',
     icon: require('../../assets/icons/fire.png'),
-    color: '#FF841E',
+    color: '#fbeee6',
   },
   {
     id: 8,
     title: 'Card',
     icon: require('../../assets/icons/credit_card.png'),
-    color: '#7B60EA',
+    color: '#efedf7',
   },
 ];
 

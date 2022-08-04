@@ -1,5 +1,10 @@
 import React from 'react';
-import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  ActivityIndicator,
+} from 'react-native';
 import {COLORS, FONTS, SIZES} from '../../constants';
 
 const CustomButton = ({
@@ -8,13 +13,18 @@ const CustomButton = ({
   containerStyles,
   labelStyles,
   disabled,
+  loading,
 }) => {
   return (
     <TouchableOpacity
       disabled={disabled}
       onPress={onPress}
       style={[styles.container, containerStyles]}>
-      <Text style={[styles.lable, labelStyles]}>{label}</Text>
+      {loading ? (
+        <ActivityIndicator color="#fff" size="large" />
+      ) : (
+        <Text style={[styles.lable, labelStyles]}>{label}</Text>
+      )}
     </TouchableOpacity>
   );
 };
