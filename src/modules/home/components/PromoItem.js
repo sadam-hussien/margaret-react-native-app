@@ -2,11 +2,20 @@ import React from 'react';
 
 import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 
+import {useNavigation} from '@react-navigation/native';
+
 import {COLORS, FONTS, icons, SIZES} from '../../../constants';
 
 const PromoItem = ({data, active}) => {
+  const navigation = useNavigation();
+
   return (
     <TouchableOpacity
+      onPress={() =>
+        navigation.navigate('Product', {
+          data,
+        })
+      }
       style={[
         styles.container,
         {backgroundColor: active ? COLORS.primary : COLORS.lightGrey},

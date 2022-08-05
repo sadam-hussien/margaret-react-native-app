@@ -1,9 +1,9 @@
-import TabNav from '../../routes/TabNav';
+import Home from './screens';
 
 const routes = [
   {
-    name: 'TabNav',
-    component: TabNav,
+    name: 'HomePage',
+    component: Home,
   },
 ];
 

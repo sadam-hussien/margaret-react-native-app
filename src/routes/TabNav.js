@@ -4,13 +4,27 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {Image} from 'react-native';
 
-import Home from '../modules/home/screens';
+import test2Routes from '../modules/test2/test.routes';
 
-import {Welcome, Test, Category, Scan} from '../screens';
+import testRoutes from '../modules/test/test.routes';
+
+import categoryRoutes from '../modules/category/category.routes';
+
+import scanRoutes from '../modules/scan/scan.routes';
+
+import {homeStackRoute} from './HomeStack';
 
 import {COLORS, FONTS, icons, SIZES} from '../constants';
 
 const Tab = createBottomTabNavigator();
+
+const routes = [
+  ...homeStackRoute,
+  ...test2Routes,
+  ...testRoutes,
+  ...categoryRoutes,
+  ...scanRoutes,
+];
 
 const TabNav = () => {
   return (
@@ -57,13 +71,18 @@ const TabNav = () => {
           ...FONTS.h4,
         },
       })}>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Category" component={Category} />
-      <Tab.Screen name="Scan" component={Scan} />
-      <Tab.Screen name="Test" component={Test} />
-      <Tab.Screen name="Welcome" component={Welcome} />
+      {routes.map((item, index) => (
+        <Tab.Screen name={item.name} component={item.component} key={index} />
+      ))}
     </Tab.Navigator>
   );
 };
 
 export default TabNav;
+
+export const tabRoute = [
+  {
+    name: 'TabNav',
+    component: TabNav,
+  },
+];

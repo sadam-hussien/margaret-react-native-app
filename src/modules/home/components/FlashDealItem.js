@@ -1,12 +1,16 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
 import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
+
+import {useNavigation} from '@react-navigation/native';
 
 import {COLORS, FONTS, icons, SIZES} from '../../../constants';
 
 const FlashDealItem = ({data, active}) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
+      onPress={() => navigation.navigate('Product', {data})}
       style={[
         styles.container,
         {backgroundColor: active ? COLORS.error : COLORS.lightGrey},
