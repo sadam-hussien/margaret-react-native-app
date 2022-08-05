@@ -2,7 +2,7 @@ import Home from './screens';
 
 const routes = [
   {
-    name: 'HomePage',
+    name: 'Home',
     component: Home,
   },
 ];

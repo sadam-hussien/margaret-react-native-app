@@ -10,14 +10,17 @@ import walkthroughRoutes from '../modules/walkthrough/walkthrough.routes';
 
 import authRoutes from '../modules/auth/auth.routes';
 
-import {tabRoute} from './TabNav';
+// import {tabRoute} from './TabNav';
+
+import {homeStackRoute} from './HomeStack';
 
 // routes
 const routes = [
   ...welcomeRoutes,
   ...walkthroughRoutes,
   ...authRoutes,
-  ...tabRoute,
+  // ...tabRoute,
+  ...homeStackRoute,
 ];
 
 const Stack = createNativeStackNavigator();

@@ -20,7 +20,7 @@ const Login = ({authToggle}) => {
   const submitLogin = values => {
     setLoading(true);
     setTimeout(() => {
-      navigate.navigate('TabNav');
+      navigate.navigate('HomePage');
     }, 20);
   };
   return (

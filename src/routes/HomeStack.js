@@ -2,18 +2,20 @@ import React from 'react';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import homeRoutes from '../modules/home/home.routes';
+// import homeRoutes from '../modules/home/home.routes';
+
+import {tabRoute} from './TabNav';
 
 import productRoutes from '../modules/product/product.routes';
 
 const Stack = createNativeStackNavigator();
 
-const routes = [...homeRoutes, ...productRoutes];
+const routes = [...tabRoute, ...productRoutes];
 
 export default function HomeStack() {
   return (
     <Stack.Navigator
-      initialRouteName="HomePage"
+      initialRouteName="TabNav"
       screenOptions={{
         headerShown: false,
       }}>
@@ -24,4 +26,4 @@ export default function HomeStack() {
   );
 }
 
-export const homeStackRoute = [{name: 'Home', component: HomeStack}];
+export const homeStackRoute = [{name: 'HomePage', component: HomeStack}];
