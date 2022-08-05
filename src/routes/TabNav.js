@@ -12,14 +12,14 @@ import categoryRoutes from '../modules/category/category.routes';
 
 import scanRoutes from '../modules/scan/scan.routes';
 
-import {homeStackRoute} from './HomeStack';
+import homeRoutes from '../modules/home/home.routes';
 
 import {COLORS, FONTS, icons, SIZES} from '../constants';
 
 const Tab = createBottomTabNavigator();
 
 const routes = [
-  ...homeStackRoute,
+  ...homeRoutes,
   ...test2Routes,
   ...testRoutes,
   ...categoryRoutes,
