@@ -1,4 +1,6 @@
 const chevron_right = require('../../assets/icons/chevron-right.png');
+const heart = require('../../assets/icons/heart.png');
+const deleteIcon = require('../../assets/icons/delete.png');
 const arrow_down_fill = require('../../assets/icons/arrow-down-fill.png');
 const arrow_left = require('../../assets/icons/arrow-left.png');
 const arrow_right_up = require('../../assets/icons/arrow_right_up.png');
@@ -39,6 +41,8 @@ const video = require('../../assets/icons/video.png');
 
 export default {
   chevron_right,
+  heart,
+  deleteIcon,
   arrow_down_fill,
   arrow_left,
   arrow_right_up,

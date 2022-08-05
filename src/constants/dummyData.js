@@ -51,6 +51,8 @@ const promoItems = [
     name: 'Wireless Controller PS4™',
     price: 278.0,
     discount: '-54%',
+    category: 'Wardrobe',
+    desc: 'Giving attribution isnt required. but is appreciated and allows contributors to gain more exposure. Add following link in website or summary of your project.',
   },
   {
     id: 3,
@@ -58,6 +60,8 @@ const promoItems = [
     name: 'T-shirt Men Uniquilo',
     price: 378.0,
     discount: '-60%',
+    category: 'Clothes',
+    desc: 'Giving attribution isnt required. but is appreciated and allows contributors to gain more exposure. Add following link in website or summary of your project.',
   },
 ];
 

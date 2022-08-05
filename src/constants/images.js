@@ -40,6 +40,8 @@ const walkthrough_04_04 = require('../../assets/images/walkthrough/walkthrough_0
 // Dummy
 const luggage_01 = require('../../assets/images/dummy/luggage_01.png');
 
+const cart_empty = require('../../assets/images/empty_cart.png');
+
 export default {
   banner01,
   banner02,
@@ -81,4 +83,6 @@ export default {
   walkthrough_04_04,
 
   luggage_01,
+
+  cart_empty,
 };

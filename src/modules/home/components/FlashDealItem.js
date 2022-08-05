@@ -10,7 +10,13 @@ const FlashDealItem = ({data, active}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('Product', {data})}
+      onPress={() => {
+        if (!active) {
+          navigation.navigate('Product', {
+            data,
+          });
+        }
+      }}
       style={[
         styles.container,
         {backgroundColor: active ? COLORS.error : COLORS.lightGrey},

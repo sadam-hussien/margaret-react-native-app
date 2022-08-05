@@ -2,12 +2,13 @@ import React from 'react';
 
 import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 
-import {useRoute} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 
 import {images, icons, COLORS, SIZES, FONTS} from '../../constants';
 
 const Header = () => {
   const {name} = useRoute();
+  const {navigate} = useNavigation();
   return (
     <View style={styles.header}>
       {/* logo  */}
@@ -20,7 +21,9 @@ const Header = () => {
         <TouchableOpacity style={styles.optionBtn}>
           <Image source={icons.bell} style={styles.optionIcon} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.optionBtn}>
+        <TouchableOpacity
+          style={styles.optionBtn}
+          onPress={() => navigate('Cart')}>
           <Image source={icons.shoppingCart} style={styles.optionIcon} />
         </TouchableOpacity>
       </View>

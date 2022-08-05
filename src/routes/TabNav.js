@@ -20,10 +20,10 @@ const Tab = createBottomTabNavigator();
 
 const routes = [
   ...homeRoutes,
-  ...test2Routes,
-  ...testRoutes,
   ...categoryRoutes,
   ...scanRoutes,
+  ...testRoutes,
+  ...test2Routes,
 ];
 
 const TabNav = () => {

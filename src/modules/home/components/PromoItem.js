@@ -11,11 +11,13 @@ const PromoItem = ({data, active}) => {
 
   return (
     <TouchableOpacity
-      onPress={() =>
-        navigation.navigate('Product', {
-          data,
-        })
-      }
+      onPress={() => {
+        if (!active) {
+          navigation.navigate('Product', {
+            data,
+          });
+        }
+      }}
       style={[
         styles.container,
         {backgroundColor: active ? COLORS.primary : COLORS.lightGrey},

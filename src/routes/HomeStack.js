@@ -2,15 +2,15 @@ import React from 'react';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-// import homeRoutes from '../modules/home/home.routes';
-
 import {tabRoute} from './TabNav';
 
 import productRoutes from '../modules/product/product.routes';
 
+import cartRoutes from '../modules/cart/cart.routes';
+
 const Stack = createNativeStackNavigator();
 
-const routes = [...tabRoute, ...productRoutes];
+const routes = [...tabRoute, ...productRoutes, ...cartRoutes];
 
 export default function HomeStack() {
   return (
