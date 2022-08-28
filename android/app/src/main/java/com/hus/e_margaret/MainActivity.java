@@ -1,4 +1,4 @@
-package com.margaret;
+package com.hus.e_margaret;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

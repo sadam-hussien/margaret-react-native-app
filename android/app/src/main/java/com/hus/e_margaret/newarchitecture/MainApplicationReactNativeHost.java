@@ -1,4 +1,4 @@
-package com.margaret.newarchitecture;
+package com.hus.e_margaret.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.margaret.BuildConfig;
-import com.margaret.newarchitecture.components.MainComponentsRegistry;
-import com.margaret.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.hus.e_margaret.BuildConfig;
+import com.hus.e_margaret.newarchitecture.components.MainComponentsRegistry;
+import com.hus.e_margaret.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.margaret.newarchitecture.modules;
+package com.hus.e_margaret.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;
